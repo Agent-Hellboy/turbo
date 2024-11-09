@@ -15,13 +15,13 @@ jobs:
 
     - name: Set up dependencies
       run: |
-        brew install yaml-cpp curl
+        brew install yaml-cpp curl googletest
 
     - name: Configure and build with CMake
       run: |
         mkdir -p build
         cd build
-        cmake -DCMAKE_PREFIX_PATH="$(brew --prefix yaml-cpp)" ../turbo
+        cmake -DCMAKE_PREFIX_PATH="$(brew --prefix yaml-cpp);$(brew --prefix googletest)" ../turbo
         make
 
     - name: Run tests
