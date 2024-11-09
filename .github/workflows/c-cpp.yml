@@ -15,13 +15,13 @@ jobs:
 
     - name: Set up dependencies
       run: |
-        brew install libyaml curl
+        brew install yaml-cpp curl
 
     - name: Configure and build with CMake
       run: |
         mkdir -p build
         cd build
-        cmake -DCMAKE_PREFIX_PATH="/usr/local" ../turbo
+        cmake -DCMAKE_PREFIX_PATH="$(brew --prefix yaml-cpp)" ../turbo
         make
 
     - name: Run tests
@@ -37,4 +37,4 @@ jobs:
     - name: Create distribution package
       run: |
         cd build
-        make package 
+        make package
