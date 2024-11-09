@@ -4,7 +4,7 @@ Hehe , I don't want to share what this is.
 
 ## Installation Instructions
 
-1. Ensure you have `yaml-cpp` and `libcurl` installed on your system.
+1. Ensure you have `yaml-cpp` , `googletest`, and `libcurl` installed on your system.
 
 2. Create a build directory, configure the project, and build it:
 
