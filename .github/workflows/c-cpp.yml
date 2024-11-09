@@ -33,8 +33,3 @@ jobs:
       run: |
         cd build
         sudo make install  
-
-    - name: Create distribution package
-      run: |
-        cd build
-        make package
